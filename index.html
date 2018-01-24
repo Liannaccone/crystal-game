@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<!-- bootstrap css link -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<!-- local CSS style sheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<title>Crystal Collectr Game</title>
+
+</head>
+<body>
+	
+		<!-- heading -->
+		<div id="heading">Crystal Collector Game!</div>
+
+		<!-- directions -->
+		<div>
+			<p>You will be given a random number at the start of the game.</p>
+			<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+			<p>You win the game by matching your total score to random number, you lose the game if you total score goes above the random number.</p>
+			<p>The value of each crystal is hidden from you until you click on it.</p>
+			<p>Each time when the game starts, the game will change the values of each crystal.</p>
+		</div>
+
+		<!-- target score box -->
+		<div id="targetscore"></div>
+
+		<!-- scoreboard -->
+		<div id="scoreboard"></div>
+
+		<!-- crystal list -->
+		<container id="crystals">
+			<div id="crystalOne"></div>
+			<div id="crystalTwo"></div>
+			<div id="crystalThree"></div>
+			<div id="crystalFour"></div>
+		</container>
+
+		<!-- your score section  -->
+		<div>Your total score is:</div>
+		<div id="yourScore"></div>
+
+
+
+	<!-- linking JS -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
