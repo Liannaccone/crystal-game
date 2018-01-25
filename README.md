@@ -16,7 +16,10 @@
 	- randomly generate number for targetNumber
 	- randomly generate number for crystals
 	- update text of #targetscore"
+	- update text of #userScore
 
+##on click
+	-add object value to userScore
 
 
 ###when win:
@@ -27,3 +30,8 @@
 ####when lose:
 	- update losses++
 	- initialize() game to restart
+
+
+###parameters
+	- crystals 1 - 12
+	- targetNumber 19 - 120
