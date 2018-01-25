@@ -15,43 +15,72 @@
 </head>
 <body>
 	
+	<!-- main body of page in container to provide grid -->
+	<div class="container">
 		<!-- heading -->
-		<div id="heading">Crystal Collector Game!</div>
+		<div id="heading" class="jumbotron">Crystal Collector Game!</div>
 
-		<!-- directions -->
-		<div>
-			<p>You will be given a random number at the start of the game.</p>
-			<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-			<p>You win the game by matching your total score to random number, you lose the game if you total score goes above the random number.</p>
-			<p>The value of each crystal is hidden from you until you click on it.</p>
-			<p>Each time when the game starts, the game will change the values of each crystal.</p>
-		</div>
+		<!-- first row: directions -->
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div id="directions" class="col-md-8">
+				<p>You will be given a random number at the start of the game.</p>
+				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+				<p>You win the game by matching your total score to random number, you lose the game if you total score goes above the random number.</p>
+				<p>The value of each crystal is hidden from you until you click on it.</p>
+				<p>Each time when the game starts, the game will change the values of each crystal.</p>
+			</div>
+			<div class="col-md-2"></div>
+		</div> <!--closes out first row -->
+		
+		<!-- second row: game objects -->
+		<div class="row">
+			
+			<!-- wins-losses count with banner -->
+			<div id="counter" class="col-md-6 panel">
+				<div id="banner"></div>
+					<br>		
+					<br>
+				<div id="wins"> Wins: 0</div>
+					<br>
+					<br>
+				<div id="losses">Losses: 0</div>
+					<br>
+					<br>
+			</div>
+			
+			<!-- scoreboard -->
+			<div id="scoreboard" class="col-md-6 panel">
+				<!-- target score box -->
+				<div> Target number:</div>
+				<div id="targetScore"></div>
 
-		<!-- target score box -->
-		<div id="targetScore"></div>
+				<!-- your score section  -->
+				<div>Your total score is:</div>
+				<div id="userScore"></div>
+				<!-- row with crystals -->
+				<div class="row">
+					<div class="col-md-6">
+						<img class="rounded img" src="assets/images/crystalOne.png" height="60" width="60" alt="crystalOne" id="crystalOne">
+					</div>
+					<div class="col-md-6">
+						<img class="rounded img" src="assets/images/crystalTwo.png" height="60" width="60" alt="crystalTwo" id="crystalTwo">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<img class="rounded img" src="assets/images/crystalThree.png" height="60" width="60" alt="crystalThree"  id="crystalThree">
+					</div>
+					<div class="col-md-6">
+						<img class="rounded img" src="assets/images/crystalFour.png" height="60" width="60" alt="crystalFour"  id="crystalFour">
+					</div>
+				</div>
 
-		<!-- scoreboard -->
-		<div>
-			<div id="banner"></div>
-			<br>
-			<div id="wins"> Wins: 0</div>
-			<br>
-			<div id="losses">Losses: 0</div>
-			<br>
-		</div>
+			</div>
 
-		<!-- crystal list -->
-		<container id="crystals">
-			<div id="crystalOne">One</div>
-			<div id="crystalTwo">Two</div>
-			<div id="crystalThree">Three</div>
-			<div id="crystalFour">Four</div>
-		</container>
+		</div> <!-- closing out second row-->
 
-		<!-- your score section  -->
-		<div>Your total score is:</div>
-		<div id="userScore"></div>
-
+	</div> <!-- closing out container-->  
 
 	<!-- linking JS -->
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
