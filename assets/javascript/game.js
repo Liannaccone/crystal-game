@@ -20,10 +20,26 @@ $(document).ready(function() {
 //===========================
 
 	function refreshUserScore() {
-		$("#userScore").text(userScore)
+		$("#userScore").text(userScore);
 	}
 
-	function start() {
+	function refreshTargetScore() {
+		$("#targetScore").text(targetScore);
+	}
+
+	function refreshBanner() {
+		$("#banner").empty()
+	}
+
+	function refreshWins() {
+		$("#wins").text("Wins: " + wins)
+	}
+
+	function refreshLosses() {
+		$("#losses").text("Losses: " + losses)
+	}
+
+	function initialize() {
 		// target number between 19 and 120
 		targetScore = Math.floor(Math.random() * ((120-19) + 1) + 19);
 		// crystal numbers between 1 and 12
@@ -34,12 +50,16 @@ $(document).ready(function() {
 		// sets user score to 0
 		userScore = 0;
 
+		console.log(targetScore)
 		console.log(crystalOne);
 		console.log(crystalTwo);
 		console.log(crystalThree);
 		console.log(crystalFour);
 
-		refreshUserScore()
+		refreshTargetScore();
+		refreshUserScore();
+		refreshWins();
+		refreshLosses();
 	}
 
 
@@ -48,29 +68,68 @@ $(document).ready(function() {
 // MAIN PROCESS
 //=============================
 
-	start()
+	initialize()
 
 	$("#crystalOne").on("click",function(){
 		userScore = userScore + crystalOne;
 		refreshUserScore();
+		if (userScore > targetScore) {
+			$("#banner").text("You lost!");
+			losses++;
+			initialize();
+			}
+		if (userScore === targetScore) {
+			$("#banner").text("You won!");
+			wins++;
+			initialize();			
+		}
 	});
 
 	$("#crystalTwo").on("click",function(){
 		userScore = userScore + crystalTwo;
 		refreshUserScore();
+		if (userScore > targetScore) {
+			$("#banner").text("You lost!");
+			losses++;
+			initialize();
+			}
+		if (userScore === targetScore) {
+			$("#banner").text("You won!");
+			wins++;
+			initialize();			
+		}
 	});
 
 	$("#crystalThree").on("click",function(){
 		userScore = userScore + crystalThree;
 		refreshUserScore();
+		if (userScore > targetScore) {
+			$("#banner").text("You lost!");
+			losses++;
+			initialize();
+			}
+		if (userScore === targetScore) {
+			$("#banner").text("You won!");
+			wins++;
+			initialize();			
+		}	
 	});
+
 
 	$("#crystalFour").on("click",function(){
 		userScore = userScore + crystalFour;
 		refreshUserScore();
+		if (userScore > targetScore) {
+			$("#banner").text("You lost!");
+			losses++;
+			initialize();
+			}
+		if (userScore === targetScore) {
+			$("#banner").text("You won!");
+			wins++;
+			initialize();			
+		}
 	});
-
-
 
 
 }); // closing out document ready
