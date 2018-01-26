@@ -9,7 +9,6 @@
 
 #directions {
 	background-color: #f5f5dc;
-	margin-bottom: 30px;
 }
 
 #counter {
@@ -23,6 +22,12 @@
 
 #crystals {
 	background-color: pink;
+	border-style: dashed;
+	border-color: #545454;
+
 }
 
+#scoreboard, #banner, #wins, #losses, #targetScore, #userScore {
+	padding: 8px;
+}
 
