@@ -5,29 +5,51 @@
 	font-weight: bolder;
 	font-size: x-large;
 	text-align: center;
+	margin-bottom: 80px;
 }
 
-#directions {
+#directions, #counter, #scoreboard, #crystals{
 	background-color: #f5f5dc;
 }
 
 #counter {
-	background-color: pink;
 	border: 1px solid gray;
+	margin-top: 20px;
 }
 
-#scoreboard {
-	background-color: yellow;
+#scoreboard, #counter {
+	font-size: large;
 }
 
 #crystals {
-	background-color: pink;
-	border-style: dashed;
 	border-color: #545454;
-
 }
 
 #scoreboard, #banner, #wins, #losses, #targetScore, #userScore {
 	padding: 8px;
 }
 
+body {
+	background-image: url(../images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.fontUL {
+	text-decoration: underline;
+}
+
+.nickHappy {
+	background-image: url("../images/nickHappy.jpg");
+	background-repeat: no-repeat;
+	background-size: 105%;
+	color: white;
+}
+
+.nickSad {
+	background-image: url("../images/nickSad.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color: red;
+	text-align: right;
+}

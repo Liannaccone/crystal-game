@@ -63,6 +63,20 @@ $(document).ready(function() {
 	}
 
 
+	function userWon () {
+		wins++
+		$("#banner").text("You won!");
+		$("#counter").addClass("nickHappy");
+		$("#counter").removeClass("nickSad");
+	}
+
+	function userLost () {
+		losses++;
+		$("#banner").text("You lost!");
+		$("#counter").addClass("nickSad");
+		$("#counter").removeClass("nickHappy");
+	}
+
 
 
 // MAIN PROCESS
@@ -74,13 +88,11 @@ $(document).ready(function() {
 		userScore = userScore + crystalOne;
 		refreshUserScore();
 		if (userScore > targetScore) {
-			$("#banner").text("You lost!");
-			losses++;
+			userLost();
 			initialize();
 			}
 		if (userScore === targetScore) {
-			$("#banner").text("You won!");
-			wins++;
+			userWon();
 			initialize();			
 		}
 	});
@@ -89,13 +101,11 @@ $(document).ready(function() {
 		userScore = userScore + crystalTwo;
 		refreshUserScore();
 		if (userScore > targetScore) {
-			$("#banner").text("You lost!");
-			losses++;
+			userLost();
 			initialize();
 			}
 		if (userScore === targetScore) {
-			$("#banner").text("You won!");
-			wins++;
+			userWon();
 			initialize();			
 		}
 	});
@@ -104,13 +114,11 @@ $(document).ready(function() {
 		userScore = userScore + crystalThree;
 		refreshUserScore();
 		if (userScore > targetScore) {
-			$("#banner").text("You lost!");
-			losses++;
+			userLost();
 			initialize();
 			}
 		if (userScore === targetScore) {
-			$("#banner").text("You won!");
-			wins++;
+			userWon();		
 			initialize();			
 		}	
 	});
@@ -120,13 +128,11 @@ $(document).ready(function() {
 		userScore = userScore + crystalFour;
 		refreshUserScore();
 		if (userScore > targetScore) {
-			$("#banner").text("You lost!");
-			losses++;
+			userLost();
 			initialize();
 			}
 		if (userScore === targetScore) {
-			$("#banner").text("You won!");
-			wins++;
+			userWon();
 			initialize();			
 		}
 	});

@@ -23,6 +23,8 @@
 		<!-- first row-->
 		<div class="row">
 
+			<div class="col-md-1"></div>
+
 			<div id="directions" class="col-md-4">
 				<p>You will be given a random number at the start of the game.</p>
 				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -33,34 +35,35 @@
 
 			<!-- spacer -->
 			<div class="col-md-1"></div>
-
+			
+			<container class="game">	
 			<div class="col-md-3">
 					<!-- scoreboard -->
 					<div id="scoreboard" class="row">
 						<div class="col-md-6">
 							<!-- target score box -->
-							<div> Target number:</div>
+							<div class="fontUL"> Target:</div>
 							<div id="targetScore"></div>
 						</div>
 						
 						<div class="col-md-6">
 							<!-- your score section  -->
-							<div>Your score:</div>
+							<div class="fontUL">Your score:</div>
 							<div id="userScore"></div>
 						</div>
 					</div>	
 
 					<!-- wins-losses count with banner -->
 					<div id="counter" class="row">
-						<div id="banner"></div>
+						<div id="banner">Welcome!</div>
 						<div id="wins"> Wins: 0</div>
 						<div id="losses">Losses: 0</div>
 					</div>
 			</div>
 				
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<!-- container with crystals -->
-				<div id="crystals">	
+				<div id="crystals" class="panel">	
 					<div class="row">
 						<div class="col-md-6">
 							<img class="rounded img" src="assets/images/crystalOne.png" height="60" width="60" alt="crystalOne" id="crystalOne">
@@ -81,6 +84,7 @@
 					</div>
 				</div>
 			</div>
+		</container>
 			<div class="col-md-1"></div>
 
 
