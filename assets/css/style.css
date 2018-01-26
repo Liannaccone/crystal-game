@@ -1,9 +1,15 @@
 
 .jumbotron {
+	background-image: url(../images/jumbo.jpg);
+	color: white;
+	font-weight: bolder;
+	font-size: x-large;
+	text-align: center;
 }
 
 #directions {
-	background-color: #f5f5dc
+	background-color: #f5f5dc;
+	margin-bottom: 30px;
 }
 
 #counter {
@@ -18,4 +24,5 @@
 #crystals {
 	background-color: pink;
 }
+
 
